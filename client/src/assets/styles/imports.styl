@@ -1,0 +1,610 @@
+@import 'variables'
+
+/*
+@media (min-width: 1150px) {
+  div:focus, button:not(.plyr__control):focus, a:focus {
+    outline none !important
+    box-shadow 0 0 0 3px #fff, 0 0 0 6px #00897B !important
+    overflow: visible !important
+    z-index: 99999 !important
+    opacity: 1 !important
+    border-radius: 3px !important
+  }
+}
+*/
+.v-tabs__wrapper {
+  contain initial !important
+  overflow: visible !important
+}
+
+.zoomer {
+  text-align: center
+
+  &.zoom {
+    position: absolute
+    top: 0
+    left: 0
+
+    video {
+      height: 100vh !important
+    }
+  }
+}
+
+textarea {
+  resize: none
+}
+
+.mdi-menu-down {
+  cursor: pointer;
+}
+
+.v-dialog, .v-window {
+  -webkit-overflow-scrolling: touch
+}
+
+.dialog_search_content .v-input__append-inner:last-child {
+  display: none
+}
+
+.file_icon_inner_img {
+  position: absolute
+  right: 12px
+  top: 12px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 30px
+  height: 30px
+
+  .v-icon {
+    font-size: 40px
+    color: #009688 !important
+  }
+
+  &:after {
+    content: ''
+    background: #fff
+    width: 30px
+    height: 30px
+    position: absolute
+    z-index: -1
+    border-radius: 50%
+    top: 0
+    left: 5px
+    @supports (display: flex) {
+      left: 0
+    }
+  }
+
+  &.photo {
+    .v-icon {
+      font-size: 25px
+    }
+
+    &:after {
+      content: ''
+      border: 3px solid #009688
+      width: 35px
+      height: 35px
+      left: -2.5px
+      top: -2.4px
+    }
+  }
+}
+
+
+// Plyr start
+
+.plyr__control.plyr__tab-focus {
+  box-shadow: 0 0 0 5px rgba(0, 150, 136, .3) !important
+  outline: 0
+}
+
+.plyr--video .plyr__control.plyr__control--overlaid[data-plyr="play"] {
+  background: rgba(0, 150, 136, 0.7) !important
+}
+
+.plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded="true"] {
+  background: #009688 !important
+}
+
+.plyr--full-ui input[type="range"] {
+  color: #009688 !important
+
+}
+
+.touch_show_hide_control_overlay {
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 1
+  width: 100%
+  height: 100%
+}
+
+.plyr__control .pause {
+  left: 0
+}
+
+.plyr.cursor_none {
+  cursor: none
+}
+
+.plyr__control--overlaid_desctop {
+  opacity: 1 !important
+  visibility: visible !important
+}
+
+.plyr__controls-mobile {
+  display: block !important
+
+  .plyr__progress {
+    input {
+      padding-top: 20px !important
+      padding-bottom: 20px !important
+    }
+  }
+  padding-bottom: 50px !important
+  @media (orientation: landscape) {
+    padding-bottom: 5px !important
+  }
+
+  .plyr__time__wrap {
+    display: flex
+    align-items: center
+
+    .plyr__time {
+      &--current {
+      }
+
+      &--duration {
+        &:before {
+          content: ''
+        }
+      }
+    }
+
+    .plyr__volume__wrap {
+      display: flex
+      margin-left: auto
+
+      .plyr__volume {
+        margin-left: 2px
+      }
+    }
+  }
+}
+
+// content
+
+.tab-wrap-content {
+  .v-window__container {
+    height: 100% !important
+  }
+}
+
+// end content
+
+.fullscreen_component {
+  &.ios {
+    .plyr__controls-mobile {
+    }
+  }
+
+  &.fullscreen {
+    .zoomer {
+      position: absolute
+      top: 0
+      left: 0
+    }
+  }
+}
+
+
+.click__mobile {
+  position: absolute
+  width: 100%
+  top: 15px
+  z-index: 3
+  height: 45%
+
+  &--top {
+    top: 0
+  }
+
+  &--bottom {
+    top: 55%
+    bottom: 0
+    height: 25%
+  }
+}
+
+
+.plyr__control__center__mobile {
+  &--rewind, &--forward {
+    position: absolute
+    margin: auto
+    top: 50%
+    background-color: rgba(0, 150, 136, .7)
+    z-index: 300
+    align-items: center
+    border-radius: 3px
+    padding: 2px
+    transform: translate(-50%, -50%)
+    display: none
+
+    &:hover {
+      background-color: #009688
+    }
+
+    img {
+      width: 25px
+    }
+  }
+
+  &--rewind {
+    left: 33%
+  }
+
+  &--forward {
+    left: 67%
+  }
+}
+
+
+//Plyr End
+
+html {
+  user-select: none
+  -webkit-touch-callout: none
+  overflow: hidden
+}
+
+.m-auto {
+  margin: auto
+}
+
+.gradient_nav {
+  background: gradient_1 !important
+}
+
+.gradient_1 {
+  background: linear-gradient(360deg, #47AEA3, #08B1C5) !important
+  color: #fff
+}
+
+.gradient_img {
+  background: linear-gradient(45deg, #9AD3DE, #93B8C0)
+}
+
+.loading_big {
+  position: absolute !important
+  margin: auto
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  z-index: 100
+}
+
+.fullscreen_component {
+  .loading_big.iphone {
+    @media (orientation: portrait) {
+      top: 0
+    }
+  }
+}
+
+.my_nav {
+  .v-toolbar__content {
+    justify-content: space-between
+  }
+
+  .v-dialog__container, .v-dialog__activator {
+    height: 100%
+  }
+
+  .dialog_search {
+    .v-dialog__activator {
+      display: flex !important
+      align-items: center
+      justify-content: center
+
+      .search {
+        margin: 0
+        font-weight: 600
+        @media (max-width: 500px) {
+          i {
+            margin-right: 0 !important
+          }
+        }
+      }
+    }
+  }
+}
+
+.autocomplete_receivers_email {
+  .v-select__selections {
+    input {
+      min-width: 100px
+    }
+  }
+}
+
+
+.select_date {
+  max-height: 150px !important
+}
+
+.share_dialog {
+  .v-input--selection-controls {
+    .v-input__control {
+      width: 100% !important
+    }
+  }
+
+  .v-textarea textarea {
+    height: 70px !important
+  }
+
+  .v-input--radio-group {
+    height: 75px
+    margin-top: -10px !important
+  }
+
+  @media (max-width: 380px) {
+    .v-input__slot .v-input--radio-group__input {
+      flex-wrap: nowrap
+    }
+
+    .v-input.v-text-field.v-text-field--single-line.v-select.v-input--is-dirty {
+      margin-right: 8px
+    }
+
+  }
+}
+
+button {
+  touch-action: manipulation
+}
+
+.content {
+  padding-top: 48px
+
+  .content__tab {
+    position: fixed
+    width: 100%
+    left: 350px
+    transition-delay: 0.36s
+    @media (max-width: 1080px) {
+      left: 0
+    }
+
+    &.content_scroling {
+    }
+
+    z-index: 4
+
+    .v-tabs__bar {
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12)
+    }
+
+    .v-tabs__item--active {
+      font-weight: 600
+      color: #009688
+
+      .v-icon {
+        color: #009688
+      }
+    }
+
+  }
+
+  .v-image.img__not__found {
+    background: #fff
+  }
+
+  .v-image.img__not__found::before {
+    content: "\F5C3"
+    display: inline-block
+    font: normal normal normal 24px / 1 "Material Design Icons"
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    font-size: 200px
+    color: #009688
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+    width: 200px
+    line-height: 200px
+  }
+
+  .v-image.img__not__found.image::before {
+    content: "\F100"
+    font-size: 170px
+    width: 170px
+  }
+
+  .content_box {
+    &:last-child {
+      margin-bottom: 80px !important
+    }
+
+    // for IE
+    max-width: calc(100% / 4 - 35px)
+    flex-basis: calc(100% / 4 - 35px)
+    @media (max-width: 1650px) {
+      max-width: calc(100% / 3 - 35px)
+      flex-basis: calc(100% / 3 - 35px)
+    }
+
+    //v-navigation-drawer--is-mobile
+    @media (max-width: 870px) {
+      max-width: calc(100% / 2 - 35px)
+      flex-basis: calc(100% / 2 - 35px)
+    }
+
+    @media (max-width: 630px) {
+      max-width: calc(100% / 1 - 35px)
+      flex-basis: calc(100% / 1 - 35px)
+    }
+    @supports (display: flex) {
+      max-width: calc(100% / 4 - 32px)
+      flex-basis: calc(100% / 4 - 32px)
+      @media (max-width: 1650px) {
+        max-width: calc(100% / 3 - 32px)
+        flex-basis: calc(100% / 3 - 32px)
+      }
+
+      //v-navigation-drawer--is-mobile
+      @media (max-width: 870px) {
+        max-width: calc(100% / 2 - 32px)
+        flex-basis: calc(100% / 2 - 32px)
+      }
+
+      @media (max-width: 630px) {
+        max-width: calc(100% / 1 - 32px)
+        flex-basis: calc(100% / 1 - 32px)
+      }
+    }
+
+
+    .file_name,
+    .file_icon {
+      color: #009688
+    }
+
+    .v-card__title {
+      font-weight: 600
+    }
+
+    .duration {
+      text-decoration: underline
+    }
+
+  }
+
+}
+
+.comment_dialog {
+  .v-card__text {
+    &.comment_card {
+      padding: 0
+
+      .v-text-field__details {
+        display: none
+      }
+
+      .v-input__slot {
+        margin: 0
+
+        textarea {
+          min-height: 236px
+          @media (max-height: 400px) {
+            min-height: 180px
+          }
+        }
+      }
+    }
+  }
+}
+
+.main_snackbar {
+  top: 38% !important
+
+  &.home {
+    top: 46% !important
+  }
+
+  &.password_recovery {
+    top: 46% !important
+  }
+  z-index: 9999 !important
+  font-weight: 700 !important
+
+  .v-snack__content {
+    justify-content: flex-start !important
+  }
+
+  .icon {
+    margin-left: -10px
+    margin-right: 10px
+  }
+  @media (max-width: 600px) {
+    width: 280px
+    left: 0 !important
+    right: 0 !important
+    margin: auto
+    transform: translateY(1.5rem)
+    border-radius: 3px
+    overflow: hidden
+  }
+}
+
+.xs {
+  @media (max-width: 500px) {
+    display: none
+  }
+}
+
+.select_lang_home_li {
+  padding-right: 0
+  cursor: pointer
+  height: 35px !important
+
+  &:hover {
+    background-color: #CFD8DC
+  }
+
+  &.active {
+    background-color: #00BFA5
+    color: #fff
+
+    &:hover {
+      background-color: #00ceb4
+    }
+  }
+}
+
+.home_login {
+  .v-input__slot {
+    input {
+      outline: none
+    }
+
+    input:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px #eeefef !important
+      -webkit-text-fill-color: #333 !important
+      color: #dfdfdf !important; /* цвет текста */
+      transition: .22s
+    }
+
+    &:hover {
+      input:-webkit-autofill {
+        -webkit-box-shadow: inset 0 0 0 50px #dfdfdf !important
+        -webkit-text-fill-color: #333 !important
+
+        &:focus {
+          -webkit-box-shadow: inset 0 0 0 50px #eeefef !important
+          -webkit-text-fill-color: #333 !important
+          transition: .22s
+        }
+      }
+    }
+
+    input {
+      &:focus {
+        &:-webkit-autofill {
+          &:hover {
+            -webkit-box-shadow: inset 0 0 0 50px #eeefef !important
+            -webkit-text-fill-color: #333 !important
+            transition: .22s
+          }
+        }
+      }
+    }
+  }
+}

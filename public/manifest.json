@@ -1,0 +1,20 @@
+{
+  "name": "Cloud Ultrasound",
+  "short_name": "Cloud Ultrasound",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#009688",
+  "background_color": "#009688",
+  "icons": [
+    {
+      "src": "/img/pwa/icon-192-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/pwa/icon-512-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
